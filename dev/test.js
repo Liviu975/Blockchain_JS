@@ -1,19 +1,25 @@
+//Test hash function
 const Blockchain = require("./blockchain");
-//const blockchain = require("./blockchain");
 
 const bitcoin = new Blockchain();
 
-bitcoin.createNewBlock(32893, 'O3392UI32', '03984IIEBUEG');
+const previousBlockHash = 'QOIE9UR92OIRE8';
+const currentBlockData = [
+    {
+        amount: 10,
+        sender: '03923239IEOUFBCB',
+        recepient: '29REO0F3KEDDIE3H',  
+    },
+    {
+        amount: 20,
+        sender: '09494HRJDUFBCB',
+        recepient: '04OEEFDHUEI4E3H',  
+    },
+    {
+        amount: 34,
+        sender: '404948HBF3IEOUFBCB',
+        recepient: 'R5H6HYO0F3KEDDIE3H',  
+    }
+];
 
-bitcoin.createNewTransaction(100, "LIO039484", 'ANA039IRJ');
 
-bitcoin.createNewBlock(1412, '09IOEB038IEN', '038EDBCUEBE');
-
-
-bitcoin.createNewTransaction(85, 'AURAS303974', 'LIO03297h');
-bitcoin.createNewTransaction(65, 'ANA993jdu7e', 'SABI08342');
-bitcoin.createNewTransaction(65, 'LIO9jedju7e', 'SABI0eu82');
-
-bitcoin.createNewBlock(8376, '08346829', '09474LIDUI');
-console.table(bitcoin.chain[2].transactions);
-console.log(bitcoin);
