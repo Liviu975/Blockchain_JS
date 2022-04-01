@@ -15,5 +15,5 @@ bitcoin.createNewTransaction(65, 'ANA993jdu7e', 'SABI08342');
 bitcoin.createNewTransaction(65, 'LIO9jedju7e', 'SABI0eu82');
 
 bitcoin.createNewBlock(8376, '08346829', '09474LIDUI');
-console.log(bitcoin.chain[2].transactions);
+console.table(bitcoin.chain[2].transactions);
 console.log(bitcoin);
