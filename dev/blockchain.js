@@ -1,9 +1,13 @@
 const sha256  = require('sha256');
+const currentNodeUrl = process.argv[3];
 
 //Create blockchain data structure
 function Blockchain(){
     this.chain = [];
     this.pendingTransactions = [];
+
+    this.currentNodeUrl = currentNodeUrl;
+    this.networkNodes = [];
 
     this.createNewBlock(100, '0', '0');
 }
@@ -24,7 +28,6 @@ Blockchain.prototype.createNewBlock = function(nonce, previousBlockHash, hash) {
     this.chain.push(newBlock);
 
     return newBlock;
-
 }
 
 //Get the last element from the block
@@ -52,7 +55,6 @@ Blockchain.prototype.hashBlock = function(previousBlockHash, currentBlockData, n
     const hash = sha256(dataAsString);
 
     return hash;
-
 }
 
 //Proof-of-Work method
