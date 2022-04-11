@@ -13,8 +13,6 @@ const PORT = process.argv[2];
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-
-
 //return entire blockchain
 app.get('/blockchain', (req, res) => {
     res.send(bitcoin);
